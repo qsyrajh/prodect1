@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="captcha-container">
+            <button class="captcha-button" onclick="refreshCaptcha()">تحديث Captcha</button>
+            <div class="captcha" id="captcha"></div>
+        </div>
+    <style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.captcha-container {
+  
+text-align: center;
+}
+.captcha-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.captcha {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+    </style>
+<script>
+    
+function refreshCaptcha() {
+    var newCaptcha = generateCaptcha();
+     document.getElementById("captcha").innerText = newCaptcha ;
+}
+function generateCaptcha() {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var captcha = "";
+
+    for (var i = 0; i < 6; i++) {
+        captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return captcha;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    refreshCaptcha();
+});
+</script>
+</body>
+</html>
+<input type="checkbox" id="toggleList">
+<label for="toggleList"></label>
+<ul id="myList" class="hidden">
+    <li>المنطقة:المالكة</li>
+    <li>كراج: متوفر</li>
+    <li>الطابق: الثالث</li>
+    <li>الملكية:طابو</li>
+    <li>مساحة بلكون:5م</li>
+    <li>مفروشة: نعم</li>
+    <li>طاقة بديلة: يتوفر</li>
+    <li>قرب سوق تجاري</li>
+    <li>حديقة بناء: يتوفر</li>
+    <li>الدفع عبر : كاش باليد</li>
+</ul>
+/////////////////////
+<tbody>
+    <tr >
+       <td>دمشق</td>
+       <td>مساحة 170م</td>
+       <td>عام واحد</td>
+       <td>14000000 ل.س</td>
+       <td> 900000ل.س/يتوفر</td>
+       <td>12/7/2024</td>
+       <td>22/7/2024</td>
+       <td><input type="checkbox" id="toggleList">
+       <label for="toggleList"></label></td>
+       <td><input type="radio" value=""></td>
+       <td>
+          <ul id="myList" class="hidden">
+                <li>المنطقة:المالكة</li>
+                <li>كراج: متوفر</li>
+                <li>الطابق: الثالث</li>
+                <li>الملكية:طابو</li>
+                <li>مساحة بلكون:5م</li>
+                <li>مفروشة: نعم</li>
+                <li>طاقة بديلة: يتوفر</li>
+                <li>قرب سوق تجاري</li>
+                <li>حديقة بناء: يتوفر</li>
+                <li>الدفع عبر : كاش باليد</li>
+                <div class="imge">
+             <img src="./شقة 1.jfif" alt="" class="akar"> </div>
+             </ul>
+          </td>
+       </tr>
+ </tbody>
+</table>
